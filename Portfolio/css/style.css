@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=ABeeZee');
+
+body{
+	font-family: 'ABeeZee', sans-serif;
+	overflow: hidden;
+	height: 900px;
+}
+/*____________________________TEXT___________________________*/
+.sous_titre{
+	font-size: 24px;
+}
+.float_right{
+	float: right;
+}
+
+.margin_left{
+	margin-left: 16%;
+}
+
+.margin_center_vertical{
+	margin: 8% 0%;
+}
+
+/*________________________ PAWN INTERACTION __________________*/
+.draggable_area{
+	width: 100%;
+}
+
+#pawn{
+	cursor: pointer;
+	position: relative;
+	z-index: 5;
+	-webkit-box-shadow: 1px 1px 1px 2px rgba(0,0,0,0.21);
+	-moz-box-shadow: 1px 1px 1px 2px rgba(0,0,0,0.21);
+	box-shadow: 1px 1px 1px 2px rgba(0,0,0,0.21);
+	border-radius: 100%;
+	background: rgb( 98, 98, 98 );
+	width: 60px;
+    height: 60px;
+}
+#target_top_left{
+	background-color: #00dffc;
+}
+#target_top_right{
+	background-color: #008c9e;
+}
+#target_bot_left{
+	background-color: #005f6b;
+}
+#target_bot_right{
+	background-color: #343838;
+}
+
+.circle,.projet_div img{
+	-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 2s ease;
+    -ms-transition: all 2s ease;
+    transition: all 2s ease;
+}
+.circle { 
+	position: relative;   
+    background: rgba( 99, 99, 99, 0.8 );
+    border-radius: 100%;
+    overflow: hidden;
+	-webkit-box-shadow: inset 0px 0px 8px 2px rgba(0,0,0,0.24);
+	-moz-box-shadow: inset 0px 0px 8px 2px rgba(0,0,0,0.24);
+	box-shadow: inset 0px 0px 8px 2px rgba(0,0,0,0.24);
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+	border:1px solid transparent;
+}
+.circle-hover{
+	-webkit-transform: scale( 2 );
+	-moz-transform: scale( 2 );
+	-o-transform: scale( 2 );
+	-ms-transform: scale( 2 );
+	transform: scale( 2 );
+	z-index: 2;
+}
+.content .row{
+	display: none;
+	position: 
+}
+.content{
+	color: white;
+	text-align: justify;
+	z-index: 5;
+	position: fixed;
+}
+
+.back{
+	cursor: pointer;
+}
+
+/*_________________ Contact _____________________*/
+.rs,.contactez_moi{
+	border :5px solid white;
+	border-radius: 100%;
+	padding: 14PX;
+	width: 65px;
+    height: 65px;
+    color: white;
+    margin-top: 50px;
+
+}
+
+.title_content{
+	font-size: bold;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.contactez_moi{
+	text-transform: uppercase;
+	border-radius: 10%;
+	font-size: bold;
+	text-decoration-style: none;
+}
+.contactez_moi:hover{
+
+}
+.margin_bot_50{
+	margin-bottom: 50px;
+}
+.margin_top_60{
+	margin-top: 60px;
+}
+.margin_bot_20{
+	margin-bottom: 20px;
+}
+.margin_bot_30{
+	margin-bottom: 30px;
+}
+
+/*_________________ Projets _____________________*/
+
+.projet_div img{
+	position: relative; 
+	width: 100%;
+	z-index: 2;
+}
