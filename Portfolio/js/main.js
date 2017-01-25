@@ -58,13 +58,23 @@ $( document ).ready(function() {
 
 	//images projets
 	$(".projet_div").on("click","img",function(){
-		$(this).css({
-			'z-index' : 3,
-			'-webkit-transform': 'scale( 2 )',
-			'-moz-transform': 'scale( 2 )',
-			'-o-transform': 'scale( 2 )',
-			'-ms-transform': 'scale( 2 )',
-			'transform': 'scale( 2 )'
-		});
+	
 	}); 
+
+	$(".partie_projets").on("mouseover","img",function(){
+		$(this).css({
+			"opacity":"0.3"
+		});
+		$(this).next(".text_projets").css({
+			"display":"block"
+		});
+	});
+	$(".partie_projets").on("mouseout","img",function(){
+		$(this).css({
+			"opacity":"1"
+		});
+		$(this).next(".text_projets").css({
+			"display":"none"
+		});
+	});
 });
