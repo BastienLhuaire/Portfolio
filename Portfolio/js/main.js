@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+	$(".text_tuto").css("opacity","1");
 	//Droppable Chunk
 	$( ".draggable_area .circle").each(function(){
 		$( this ).droppable({
@@ -16,6 +17,7 @@ $( document ).ready(function() {
 		   			'transform': 'scale( 10 )'
  		    	});
  		    	$("#pawn").css("display","none");
+ 		    	$(".text_tuto").css("opacity","0");
  		    	//replace the pawn to initial position
  		    	$("#pawn").draggable({revert: "valid"});
  		    	$(".partie_"+$(this).attr("name")).fadeIn(2000);
@@ -45,7 +47,7 @@ $( document ).ready(function() {
 			'z-index' : 1
  		});
  		$("#pawn").draggable({revert: "invalid"});
- 		$(".partie_"+$(this).attr("name")).fadeOut(1000);
+ 		$(".partie_"+$(this).attr("name")).fadeOut(500);
  		$("#pawn").fadeIn(2000);
  		$(".circle_"+$(this).attr("name")).css({
  			'-webkit-transform': "",
@@ -57,24 +59,37 @@ $( document ).ready(function() {
 	});
 
 	//images projets
-	$(".projet_div").on("click","img",function(){
-	
-	}); 
 
-	$(".partie_projets").on("mouseover","img",function(){
-		$(this).css({
+	$(".partie_projets").on("mouseover","a",function(){
+		$(this).find("img").css({
 			"opacity":"0.3"
 		});
-		$(this).next(".text_projets").css({
+		$(this).nextAll(".text_projets").css({
 			"display":"block"
 		});
 	});
-	$(".partie_projets").on("mouseout","img",function(){
-		$(this).css({
+	$(".partie_projets").on("mouseout","a",function(){
+		$(this).find("img").css({
 			"opacity":"1"
 		});
-		$(this).next(".text_projets").css({
+		$(this).nextAll(".text_projets").css({
 			"display":"none"
 		});
+	});
+	//text projets
+	$(".partie_projets").on("mouseover",".text_projets",function(){
+		$(this).prev("a").find("img").css({
+			"opacity":"0.3"
+		});
+		$(this).css({
+			"display":"block"
+		});
+	});
+
+	//*******************Skills bar***********************
+	$('.skillbar').each(function(){
+		$(this).find('.skillbar-bar').animate({
+			width:$(this).attr('data-percent')
+		},6000);
 	});
 });

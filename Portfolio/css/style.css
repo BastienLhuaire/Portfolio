@@ -3,7 +3,8 @@
 body{
 	font-family: 'ABeeZee', sans-serif;
 	overflow: hidden;
-	height: 900px;
+	background-color: #DFF2FF;
+	color: 
 }
 /*____________________________TEXT___________________________*/
 .sous_titre{
@@ -22,12 +23,13 @@ strong{
 }
 
 .margin_center_vertical{
-	margin: 10% 0% 13% 0%;
+	margin: 8% 0% 8% 0%;
 }
 
 /*________________________ PAWN INTERACTION __________________*/
 .draggable_area{
 	width: 100%;
+	color: #626262;
 }
 
 #pawn{
@@ -41,6 +43,13 @@ strong{
 	background: rgb( 98, 98, 98 );
 	width: 60px;
     height: 60px;
+    margin-bottom: 10px;
+}
+
+.text_tuto{
+	margin-left: 7px;
+	opacity: 0;
+	cursor: default;
 }
 #target_top_left{
 	background-color: #00dffc;
@@ -55,7 +64,7 @@ strong{
 	background-color: #343838;
 }
 
-.circle,.projet_div{
+.circle,.projet_div,.text_tuto{
 	-webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 2s ease;
@@ -97,6 +106,13 @@ strong{
 .back{
 	cursor: pointer;
 }
+.back:hover{
+	-webkit-transform: scale( 1.5 );
+	-moz-transform: scale( 1.5 );
+	-o-transform: scale( 1.5 );
+	-ms-transform: scale( 1.5 );
+	transform: scale( 1.5 );
+}
 
 /*_________________ Contact _____________________*/
 .rs,.contactez_moi{
@@ -107,7 +123,11 @@ strong{
     height: 65px;
     color: white;
     margin-top: 50px;
-
+    -webkit-transition: all 03s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.7s ease;
+    -ms-transition: all 0.7s ease;
+    transition: all 0.7s ease;
 }
 
 .title_content{
@@ -120,11 +140,28 @@ strong{
 	text-transform: uppercase;
 	border-radius: 10%;
 	font-size: bold;
-	text-decoration-style: none;
+	text-decoration: none;
 }
-.contactez_moi:hover{
+.contactez_moi:hover,.rs:hover{
+	text-decoration:none;
+	color: #005F6B;
+	font-weight: bold;
+	background-color: white;
+}
+.mail{
+	text-decoration: none;
+}
+.mail:hover{
+	color: white;
+}
+.mail:active{
+	color: white;
+}
+.mail:visited{
+	color: white;
+}
 
-}
+/* Margin */
 .margin_bot_50{
 	margin-bottom: 50px;
 }
@@ -138,6 +175,7 @@ strong{
 	margin-bottom: 30px;
 }
 
+
 /*_________________ Projets _____________________*/
 
 .projet_div img{
@@ -147,12 +185,92 @@ strong{
 }
 .projet_div{
 	background-color: black;
+	padding: 0px;
 }
 
 .text_projets{
 	display: none;
 	position: absolute;
-	top: 15%;
+	top: 48%;
 	left: 15%;
 	z-index:4; 
+}
+
+/*__________________ Skills ________________________*/
+.skillbar {
+	position:relative;
+	display:block;
+	margin-bottom:15px;
+	width:100%;
+	background:#eee;
+	height:35px;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-webkit-transition:0.4s linear;
+	-moz-transition:0.4s linear;
+	-ms-transition:0.4s linear;
+	-o-transition:0.4s linear;
+	transition:0.4s linear;
+	-webkit-transition-property:width, background-color;
+	-moz-transition-property:width, background-color;
+	-ms-transition-property:width, background-color;
+	-o-transition-property:width, background-color;
+	transition-property:width, background-color;
+}
+
+.skillbar-title {
+	position:absolute;
+	top:0;
+	left:0;
+	width:110px;
+	font-weight:bold;
+	font-size:13px;
+	color:#ffffff;
+	background:#6adcfa;
+	-webkit-border-top-left-radius:3px;
+	-webkit-border-bottom-left-radius:4px;
+	-moz-border-radius-top-left:3px;
+	-moz-border-radius-bottom-left:3px;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+
+.skillbar-title span {
+	display:block;
+	background:rgba(0, 0, 0, 0.1);
+	padding:0 20px;
+	height:35px;
+	line-height:35px;
+	-webkit-border-top-left-radius:3px;
+	-webkit-border-bottom-left-radius:3px;
+	-moz-border-radius-top-left:3px;
+	-moz-border-radius-bottom-left:3px;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+
+.skillbar-bar {
+	height:35px;
+	width:0px;
+	background:#6adcfa;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+}
+
+.skill-bar-percent {
+	position:absolute;
+	right:10px;
+	top:0;
+	font-size:11px;
+	height:35px;
+	line-height:35px;
+	color:#ffffff;
+	color:rgba(0, 0, 0, 0.4);
+}
+
+.skill-bar-percent span{
+	font-size: 13px;
+	color: #757575;
 }
