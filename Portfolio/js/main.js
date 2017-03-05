@@ -19,7 +19,7 @@ $( document ).ready(function() {
  		    	$("#pawn").css("display","none");
  		    	$(".text_tuto").css("opacity","0");
  		    	//replace the pawn to initial position
- 		    	$("#pawn").draggable({revert: "valid"});
+ 		    	$("#pawn").draggable({revert: "valid",scroll: false});
  		    	$(".partie_"+$(this).attr("name")).fadeIn(2000);
 		   		$(".partie_"+$(this).attr("name")).find(".back").attr("name",$(this).attr("name"));
 		    },
@@ -31,7 +31,8 @@ $( document ).ready(function() {
 	$("#pawn").draggable({
 		refreshPositions: true,
 		revert: "invalid",
-		cursor: "grabbing"
+		cursor: "grabbing",
+		scroll: false
 	});
 
 	//Back Button
@@ -46,7 +47,7 @@ $( document ).ready(function() {
 			'transform': 'scale( 1 )',
 			'z-index' : 1
  		});
- 		$("#pawn").draggable({revert: "invalid"});
+ 		$("#pawn").draggable({revert: "invalid",scroll: false});
  		$(".partie_"+$(this).attr("name")).fadeOut(500);
  		$("#pawn").fadeIn(2000);
  		$(".circle_"+$(this).attr("name")).css({
